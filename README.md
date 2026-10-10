@@ -2,6 +2,8 @@
 
 **Stop paying a chat model to answer yes/no. A recipe and a benchmark harness for decision models.**
 
+![bench.mjs replaying a fixture: cost and latency, agreement and accuracy tables](docs/demo.gif)
+
 Many LLM calls in production are not "write something". They are "decide something": is this message angry, which topic is it, is the brand mentioned, how urgent is it. A chat model does these fine, but you pay for a full generation and wait for it. A decision model returns the answer as probabilities with a confidence, and it is built for exactly this job.
 
 This repo has two small scripts, no dependencies, Node 18 or newer:
@@ -36,6 +38,23 @@ cd pilot-first-decisions
 # put your own OpenRouter key in the OPENROUTER_API_KEY environment variable
 # and never write it into a file in this repo
 npm test                        # no network needed
+```
+
+See what a report looks like first. This replays invented answers, so it needs no key, no network and costs nothing:
+
+```bash
+node bench.mjs --fixture examples/fixture.json \
+  --data examples/support-messages.jsonl \
+  --questions examples/questions.json \
+  --confidence-threshold 0.8 --limit 60
+```
+
+The numbers in that run measure nothing. `scripts/make-fixture.mjs` shows how they are made.
+
+As a Claude Code plugin (a skill plus the bundled script):
+
+```text
+/plugin install pilot-first-decisions --marketplace nickspiz/pilot-first-decisions
 ```
 
 Ask a few questions about one text:
@@ -88,6 +107,7 @@ CSV or JSONL, one row per item. The text column is `text` (change it with `--tex
 | `--decision-model` | `typesafe/jev-1.13` | Decision model id. |
 | `--concurrency` | 4 | Parallel rows. |
 | `--out` | `bench-out` | Where `report.md` and `results.json` go. |
+| `--fixture` | off | Replay canned answers from a file instead of calling any API. No key needed. |
 
 For `noul` questions, confidence is how far the probability is from 0.5, scaled to 0..1.
 
@@ -135,3 +155,5 @@ Covers answer parsing, request shape, CSV and JSONL loading, agreement, confusio
 ## License
 
 MIT
+
+If this helped, a star helps others find it.

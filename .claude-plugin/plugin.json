@@ -1,0 +1,10 @@
+{
+  "name": "pilot-first-decisions",
+  "version": "0.1.0",
+  "description": "A recipe and benchmark harness for swapping chat-model yes/no and classification calls for a cheaper decision model, pilot first.",
+  "author": { "name": "Nikita Spitsyn", "url": "https://github.com/nickspiz" },
+  "homepage": "https://github.com/nickspiz/pilot-first-decisions",
+  "repository": "https://github.com/nickspiz/pilot-first-decisions",
+  "license": "MIT",
+  "keywords": ["llm", "classification", "benchmark", "openrouter"]
+}

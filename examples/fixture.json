@@ -1,0 +1,1445 @@
+{
+ "_note": "Invented answers for offline demos. Not a measurement of any model.",
+ "rows": {
+  "1": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.97
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.96
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 308
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "bug"
+    },
+    "cost": 0.00021,
+    "latencyMs": 1143
+   }
+  },
+  "2": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.89
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.95
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 367
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "billing"
+    },
+    "cost": 0.00026,
+    "latencyMs": 1083
+   }
+  },
+  "3": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.89
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.96
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 329
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "billing"
+    },
+    "cost": 0.00032,
+    "latencyMs": 755
+   }
+  },
+  "4": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.89
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.92
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 314
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "billing"
+    },
+    "cost": 0.00027,
+    "latencyMs": 1117
+   }
+  },
+  "5": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.91
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.9
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 350
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "billing"
+    },
+    "cost": 0.00022,
+    "latencyMs": 1093
+   }
+  },
+  "6": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.5
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.5
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 328
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "billing"
+    },
+    "cost": 0.00025,
+    "latencyMs": 780
+   }
+  },
+  "7": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.93
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.9
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 441
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "billing"
+    },
+    "cost": 0.00024,
+    "latencyMs": 883
+   }
+  },
+  "8": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.96
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.62
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 333
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "billing"
+    },
+    "cost": 0.00023,
+    "latencyMs": 1127
+   }
+  },
+  "9": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.84
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.96
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 334
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "billing"
+    },
+    "cost": 0.00026,
+    "latencyMs": 1040
+   }
+  },
+  "10": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.86
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.97
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 409
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "billing"
+    },
+    "cost": 0.00028,
+    "latencyMs": 898
+   }
+  },
+  "11": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.9
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.87
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 420
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "bug"
+    },
+    "cost": 0.0003,
+    "latencyMs": 1048
+   }
+  },
+  "12": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.93
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.94
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 390
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "bug"
+    },
+    "cost": 0.0003,
+    "latencyMs": 726
+   }
+  },
+  "13": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.41
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.96
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 458
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "bug"
+    },
+    "cost": 0.00031,
+    "latencyMs": 713
+   }
+  },
+  "14": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.42
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.92
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 360
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "other"
+    },
+    "cost": 0.00022,
+    "latencyMs": 712
+   }
+  },
+  "15": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.83
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.87
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 459
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "bug"
+    },
+    "cost": 0.00022,
+    "latencyMs": 949
+   }
+  },
+  "16": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.93
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 371
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "bug"
+    },
+    "cost": 0.00022,
+    "latencyMs": 1036
+   }
+  },
+  "17": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.82
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 324
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "bug"
+    },
+    "cost": 0.0003,
+    "latencyMs": 868
+   }
+  },
+  "18": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.89
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.93
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 302
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "bug"
+    },
+    "cost": 0.00029,
+    "latencyMs": 953
+   }
+  },
+  "19": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.95
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.36
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 352
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "bug"
+    },
+    "cost": 0.00026,
+    "latencyMs": 727
+   }
+  },
+  "20": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.97
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.99
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 369
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "billing"
+    },
+    "cost": 0.00031,
+    "latencyMs": 811
+   }
+  },
+  "21": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.98
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.81
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 329
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "account"
+    },
+    "cost": 0.00028,
+    "latencyMs": 1116
+   }
+  },
+  "22": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.49
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.9
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 346
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "account"
+    },
+    "cost": 0.00025,
+    "latencyMs": 956
+   }
+  },
+  "23": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.99
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.8
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 450
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "account"
+    },
+    "cost": 0.00027,
+    "latencyMs": 1064
+   }
+  },
+  "24": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.94
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.84
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 445
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "account"
+    },
+    "cost": 0.00027,
+    "latencyMs": 866
+   }
+  },
+  "25": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.96
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.88
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 446
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "account"
+    },
+    "cost": 0.00029,
+    "latencyMs": 829
+   }
+  },
+  "26": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.99
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.97
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 403
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "account"
+    },
+    "cost": 0.00029,
+    "latencyMs": 1082
+   }
+  },
+  "27": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.85
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.87
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 434
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "account"
+    },
+    "cost": 0.00025,
+    "latencyMs": 754
+   }
+  },
+  "28": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.83
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 422
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "account"
+    },
+    "cost": 0.00026,
+    "latencyMs": 888
+   }
+  },
+  "29": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.82
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.84
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 311
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "account"
+    },
+    "cost": 0.0003,
+    "latencyMs": 1139
+   }
+  },
+  "30": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.81
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.83
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 357
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "account"
+    },
+    "cost": 0.00024,
+    "latencyMs": 768
+   }
+  },
+  "31": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.87
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.88
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 434
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "feature_request"
+    },
+    "cost": 0.00024,
+    "latencyMs": 1017
+   }
+  },
+  "32": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.91
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.84
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 370
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "feature_request"
+    },
+    "cost": 0.00031,
+    "latencyMs": 1090
+   }
+  },
+  "33": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.93
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 437
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "feature_request"
+    },
+    "cost": 0.00029,
+    "latencyMs": 1135
+   }
+  },
+  "34": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.93
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.84
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 450
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "feature_request"
+    },
+    "cost": 0.00022,
+    "latencyMs": 919
+   }
+  },
+  "35": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.44
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 424
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "feature_request"
+    },
+    "cost": 0.00026,
+    "latencyMs": 875
+   }
+  },
+  "36": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.95
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.94
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 305
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "feature_request"
+    },
+    "cost": 0.00022,
+    "latencyMs": 1119
+   }
+  },
+  "37": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.82
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.96
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 303
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "feature_request"
+    },
+    "cost": 0.00023,
+    "latencyMs": 829
+   }
+  },
+  "38": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.86
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.92
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 375
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "feature_request"
+    },
+    "cost": 0.00032,
+    "latencyMs": 876
+   }
+  },
+  "39": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.96
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 349
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "feature_request"
+    },
+    "cost": 0.00022,
+    "latencyMs": 1131
+   }
+  },
+  "40": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.85
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.87
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 390
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "feature_request"
+    },
+    "cost": 0.00026,
+    "latencyMs": 1148
+   }
+  },
+  "41": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.84
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.93
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 318
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "billing"
+    },
+    "cost": 0.00026,
+    "latencyMs": 1074
+   }
+  },
+  "42": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.84
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.91
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 400
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "other"
+    },
+    "cost": 0.00031,
+    "latencyMs": 782
+   }
+  },
+  "43": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.91
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 404
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "other"
+    },
+    "cost": 0.00021,
+    "latencyMs": 789
+   }
+  },
+  "44": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.93
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.82
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 368
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "bug"
+    },
+    "cost": 0.00028,
+    "latencyMs": 813
+   }
+  },
+  "45": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.87
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.93
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 429
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "other"
+    },
+    "cost": 0.00021,
+    "latencyMs": 768
+   }
+  },
+  "46": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.81
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.82
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 418
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "other"
+    },
+    "cost": 0.00023,
+    "latencyMs": 962
+   }
+  },
+  "47": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.84
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.36
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 459
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "other"
+    },
+    "cost": 0.00024,
+    "latencyMs": 1100
+   }
+  },
+  "48": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.86
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.93
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 460
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "other"
+    },
+    "cost": 0.00028,
+    "latencyMs": 1037
+   }
+  },
+  "49": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.82
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.49
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 444
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "other"
+    },
+    "cost": 0.00027,
+    "latencyMs": 882
+   }
+  },
+  "50": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.88
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.64
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 383
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "other"
+    },
+    "cost": 0.00025,
+    "latencyMs": 927
+   }
+  },
+  "51": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.82
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.97
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 413
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "bug"
+    },
+    "cost": 0.0003,
+    "latencyMs": 842
+   }
+  },
+  "52": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.56
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.88
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 397
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "billing"
+    },
+    "cost": 0.00022,
+    "latencyMs": 906
+   }
+  },
+  "53": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.83
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.84
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 337
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "account"
+    },
+    "cost": 0.00025,
+    "latencyMs": 997
+   }
+  },
+  "54": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.9
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.95
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 351
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "feature_request"
+    },
+    "cost": 0.00027,
+    "latencyMs": 1069
+   }
+  },
+  "55": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.95
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.93
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 345
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "bug"
+    },
+    "cost": 0.00026,
+    "latencyMs": 963
+   }
+  },
+  "56": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.97
+     },
+     "topic": {
+      "label": "account",
+      "confidence": 0.85
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 436
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "account"
+    },
+    "cost": 0.00026,
+    "latencyMs": 701
+   }
+  },
+  "57": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "negative",
+      "confidence": 0.81
+     },
+     "topic": {
+      "label": "bug",
+      "confidence": 0.37
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 438
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "negative",
+     "topic": "other"
+    },
+    "cost": 0.00022,
+    "latencyMs": 890
+   }
+  },
+  "58": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.94
+     },
+     "topic": {
+      "label": "other",
+      "confidence": 0.81
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 359
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "other"
+    },
+    "cost": 0.00028,
+    "latencyMs": 1004
+   }
+  },
+  "59": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "positive",
+      "confidence": 0.94
+     },
+     "topic": {
+      "label": "billing",
+      "confidence": 0.52
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 337
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "positive",
+     "topic": "bug"
+    },
+    "cost": 0.00026,
+    "latencyMs": 720
+   }
+  },
+  "60": {
+   "decision": {
+    "answers": {
+     "sentiment": {
+      "label": "neutral",
+      "confidence": 0.92
+     },
+     "topic": {
+      "label": "feature_request",
+      "confidence": 0.97
+     }
+    },
+    "cost": 0.00003,
+    "latencyMs": 319
+   },
+   "chat": {
+    "answers": {
+     "sentiment": "neutral",
+     "topic": "feature_request"
+    },
+    "cost": 0.00024,
+    "latencyMs": 705
+   }
+  }
+ }
+}

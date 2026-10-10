@@ -111,6 +111,7 @@ export function renderReport(s, meta) {
   const L = [];
   L.push('# Decision model vs chat model', '');
   L.push(`Rows: ${s.rows} (failed: ${s.errors}). Decision model: ${meta.decisionModel}. Chat model: ${meta.chatModel}.`, '');
+  if (meta.fixture) L.push('> Fixture replay. These answers are invented, so the numbers show the shape of a report and measure nothing.', '');
   L.push('## Cost and latency', '', '| | Total cost | Per 100 rows | Median latency |', '|---|---|---|---|');
   const per100 = (c) => (s.rows ? usd((c / s.rows) * 100) : 'n/a');
   L.push(`| Decision | ${usd(s.decisionCost)} | ${per100(s.decisionCost)} | ${s.decisionMedianMs ?? 'n/a'} ms |`);
@@ -154,6 +155,7 @@ function parseArgs(argv) {
     else if (a === '--confidence-threshold') o.threshold = Number(v());
     else if (a === '--concurrency') o.concurrency = Number(v());
     else if (a === '--out') o.out = v();
+    else if (a === '--fixture') o.fixture = v();
     else if (a === '--help' || a === '-h') o.help = true;
     else throw new Error(`Unknown option ${a}`);
   }
@@ -162,10 +164,14 @@ function parseArgs(argv) {
 
 const USAGE = `Usage: node bench.mjs --data rows.jsonl|rows.csv --questions questions.json --chat-model <openrouter model id>
   [--limit 20|all] [--confidence-threshold 0.8] [--text-field text] [--concurrency 4] [--out bench-out]
-Needs OPENROUTER_API_KEY in the environment. Default limit is 20 rows: pilot first.`;
+Needs OPENROUTER_API_KEY in the environment. Default limit is 20 rows: pilot first.
+
+Offline demo, no key and no cost: node bench.mjs --fixture examples/fixture.json --data examples/support-messages.jsonl --questions examples/questions.json
+It replays invented answers (see scripts/make-fixture.mjs). The numbers show the shape of a report, not a model.`;
 
 async function main() {
   const o = parseArgs(process.argv.slice(2));
+  if (o.fixture) { o.chatModel ??= 'fixture/chat'; o.decisionModel = 'fixture/decision'; }
   if (o.help || !o.data || !o.questions || !o.chatModel) { console.error(USAGE); process.exit(o.help ? 0 : 2); }
   if (!Number.isFinite(o.limit) && o.limit !== Infinity) throw new Error('--limit must be a number or "all"');
   const questions = JSON.parse(readFileSync(o.questions, 'utf8'));
@@ -173,9 +179,17 @@ async function main() {
   const rows = loadRows(o.data).slice(0, o.limit);
   if (!rows.length) throw new Error('No rows to run');
   if (!rows.every((r) => r[o.textField])) throw new Error(`Every row needs a "${o.textField}" field (use --text-field)`);
-  console.error(`Running ${rows.length} rows against ${o.decisionModel} and ${o.chatModel}...`);
+  const fixture = o.fixture ? JSON.parse(readFileSync(o.fixture, 'utf8')) : null;
+  console.error(fixture
+    ? `Fixture replay: ${rows.length} rows, canned answers, no API calls, no cost.`
+    : `Running ${rows.length} rows against ${o.decisionModel} and ${o.chatModel}...`);
   const results = await pool(rows, o.concurrency, async (row, i) => {
     const text = String(row[o.textField]);
+    if (fixture) {
+      const f = fixture.rows?.[String(i + 1)];
+      if (!f) throw new Error(`fixture has no row ${i + 1}`);
+      return { index: i + 1, row, text, decision: f.decision, chat: f.chat };
+    }
     const [decision, chat] = await Promise.all([
       decide({ state: text, questions, model: o.decisionModel }).catch((e) => { console.error(`row ${i + 1} decision failed: ${e.message}`); return null; }),
       chatDecide({ text, questions, model: o.chatModel }).catch((e) => { console.error(`row ${i + 1} chat failed: ${e.message}`); return null; }),
@@ -183,7 +197,7 @@ async function main() {
     return { index: i + 1, row, text, decision, chat };
   });
   const summary = summarize(results, questions, { threshold: o.threshold ?? null });
-  const report = renderReport(summary, { decisionModel: o.decisionModel, chatModel: o.chatModel, threshold: o.threshold ?? null });
+  const report = renderReport(summary, { decisionModel: o.decisionModel, chatModel: o.chatModel, threshold: o.threshold ?? null, fixture: Boolean(fixture) });
   mkdirSync(o.out, { recursive: true });
   writeFileSync(`${o.out}/report.md`, report);
   writeFileSync(`${o.out}/results.json`, JSON.stringify({ summary, results }, null, 2));

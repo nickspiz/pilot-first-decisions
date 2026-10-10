@@ -1,0 +1,12 @@
+{
+  "name": "pilot-first-decisions",
+  "description": "Decision-model pilot recipe for Claude Code",
+  "owner": { "name": "Nikita Spitsyn", "url": "https://github.com/nickspiz" },
+  "plugins": [
+    {
+      "name": "pilot-first-decisions",
+      "source": "./",
+      "description": "A skill and a bundled benchmark script for testing a decision model against your current chat model on real rows."
+    }
+  ]
+}
