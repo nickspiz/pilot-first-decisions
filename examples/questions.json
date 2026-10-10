@@ -1,0 +1,22 @@
+{
+  "sentiment": {
+    "type": "choice",
+    "instructions": "What is the tone of the customer toward the product or company?",
+    "criteria": {
+      "positive": "The customer is happy, thankful or praising.",
+      "neutral": "A plain question or request with no clear emotion.",
+      "negative": "The customer is frustrated, upset or complaining."
+    }
+  },
+  "topic": {
+    "type": "choice",
+    "instructions": "What is the message mainly about?",
+    "criteria": {
+      "billing": "Payments, invoices, refunds, prices, plans.",
+      "bug": "Something is broken or behaves wrongly.",
+      "account": "Login, profile, access, workspace membership.",
+      "feature_request": "A request for something the product does not do yet.",
+      "other": "Anything else."
+    }
+  }
+}

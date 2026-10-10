@@ -1,0 +1,60 @@
+{"id":1,"text":"I was charged twice for the same month and nobody has replied to my ticket.","expected_sentiment":"negative","expected_topic":"billing"}
+{"id":2,"text":"Why did my plan jump from $9 to $15 without any warning?","expected_sentiment":"negative","expected_topic":"billing"}
+{"id":3,"text":"Can you send me last month's invoice as a PDF?","expected_sentiment":"neutral","expected_topic":"billing"}
+{"id":4,"text":"Thanks for the quick refund, it arrived this morning.","expected_sentiment":"positive","expected_topic":"billing"}
+{"id":5,"text":"How do I change the card on file?","expected_sentiment":"neutral","expected_topic":"billing"}
+{"id":6,"text":"The refund you promised a week ago still has not shown up.","expected_sentiment":"negative","expected_topic":"billing"}
+{"id":7,"text":"Does the annual plan include the same features as monthly?","expected_sentiment":"neutral","expected_topic":"billing"}
+{"id":8,"text":"I cancelled my trial and was billed anyway. This is not okay.","expected_sentiment":"negative","expected_topic":"billing"}
+{"id":9,"text":"Great that you added invoices with our company VAT number.","expected_sentiment":"positive","expected_topic":"billing"}
+{"id":10,"text":"Is there a discount for nonprofits?","expected_sentiment":"neutral","expected_topic":"billing"}
+{"id":11,"text":"The app crashes every time I open the settings screen.","expected_sentiment":"negative","expected_topic":"bug"}
+{"id":12,"text":"Export to CSV gives me an empty file. Third time this week.","expected_sentiment":"negative","expected_topic":"bug"}
+{"id":13,"text":"The dark mode toggle seems to reset after I restart the app.","expected_sentiment":"neutral","expected_topic":"bug"}
+{"id":14,"text":"The sync bug I reported is fixed in the latest update, thank you!","expected_sentiment":"positive","expected_topic":"bug"}
+{"id":15,"text":"Notifications arrive six hours late, which makes them useless.","expected_sentiment":"negative","expected_topic":"bug"}
+{"id":16,"text":"When I rotate my phone the layout shifts a little. Not a big deal.","expected_sentiment":"neutral","expected_topic":"bug"}
+{"id":17,"text":"Search returns nothing for words I know exist in my notes.","expected_sentiment":"negative","expected_topic":"bug"}
+{"id":18,"text":"I get a 500 error when uploading files over 50 MB.","expected_sentiment":"neutral","expected_topic":"bug"}
+{"id":19,"text":"Everything loads faster since last week's release, nice work.","expected_sentiment":"positive","expected_topic":"bug"}
+{"id":20,"text":"Login loops back to the start page and I cannot get in at all.","expected_sentiment":"negative","expected_topic":"bug"}
+{"id":21,"text":"How can I change the email address on my account?","expected_sentiment":"neutral","expected_topic":"account"}
+{"id":22,"text":"I never got the login reset email and I am locked out.","expected_sentiment":"negative","expected_topic":"account"}
+{"id":23,"text":"Switching to single sign-on was painless, thanks to the guide.","expected_sentiment":"positive","expected_topic":"account"}
+{"id":24,"text":"Can two people share one workspace on the team plan?","expected_sentiment":"neutral","expected_topic":"account"}
+{"id":25,"text":"Someone deleted my project and I cannot see who did it.","expected_sentiment":"negative","expected_topic":"account"}
+{"id":26,"text":"Where do I find the option to delete my account?","expected_sentiment":"neutral","expected_topic":"account"}
+{"id":27,"text":"Your support told me my account was merged, but half my data is gone.","expected_sentiment":"negative","expected_topic":"account"}
+{"id":28,"text":"The new profile page is clean and easy to use.","expected_sentiment":"positive","expected_topic":"account"}
+{"id":29,"text":"Is two-factor authentication available on the free plan?","expected_sentiment":"neutral","expected_topic":"account"}
+{"id":30,"text":"I keep getting logged out every few minutes. Very annoying.","expected_sentiment":"negative","expected_topic":"account"}
+{"id":31,"text":"It would be fantastic to have a calendar view, we love the rest of the product.","expected_sentiment":"positive","expected_topic":"feature_request"}
+{"id":32,"text":"Please add an option to export notes as Markdown.","expected_sentiment":"neutral","expected_topic":"feature_request"}
+{"id":33,"text":"Any plans for a Linux desktop client?","expected_sentiment":"neutral","expected_topic":"feature_request"}
+{"id":34,"text":"Still no way to set recurring reminders. I am close to switching to another tool.","expected_sentiment":"negative","expected_topic":"feature_request"}
+{"id":35,"text":"Love the widget! Could it also show tomorrow's tasks?","expected_sentiment":"positive","expected_topic":"feature_request"}
+{"id":36,"text":"Can you add keyboard shortcuts for moving items between lists?","expected_sentiment":"neutral","expected_topic":"feature_request"}
+{"id":37,"text":"A bulk edit option for tags would save me a lot of clicks.","expected_sentiment":"neutral","expected_topic":"feature_request"}
+{"id":38,"text":"Why is there no offline mode in 2026? It is a basic need.","expected_sentiment":"negative","expected_topic":"feature_request"}
+{"id":39,"text":"Your roadmap looks great. One more vote for team templates.","expected_sentiment":"positive","expected_topic":"feature_request"}
+{"id":40,"text":"Could the API return timestamps in UTC instead of local time?","expected_sentiment":"neutral","expected_topic":"feature_request"}
+{"id":41,"text":"Just wanted to say the onboarding was lovely. Well done to the whole team.","expected_sentiment":"positive","expected_topic":"other"}
+{"id":42,"text":"What are your support hours on weekends?","expected_sentiment":"neutral","expected_topic":"other"}
+{"id":43,"text":"Your documentation is out of date and the screenshots do not match the app.","expected_sentiment":"negative","expected_topic":"other"}
+{"id":44,"text":"Do you have a status page where I can check for outages?","expected_sentiment":"neutral","expected_topic":"other"}
+{"id":45,"text":"Five stars. It replaced three tools for us.","expected_sentiment":"positive","expected_topic":"other"}
+{"id":46,"text":"Is there a student discount or an education program?","expected_sentiment":"neutral","expected_topic":"other"}
+{"id":47,"text":"I waited four days for an answer to a simple question.","expected_sentiment":"negative","expected_topic":"other"}
+{"id":48,"text":"Can I get a copy of your data processing agreement?","expected_sentiment":"neutral","expected_topic":"other"}
+{"id":49,"text":"The support agent walked me through everything patiently, thank you.","expected_sentiment":"positive","expected_topic":"other"}
+{"id":50,"text":"Where can I find the changelog for the mobile app?","expected_sentiment":"neutral","expected_topic":"other"}
+{"id":51,"text":"After the update, my saved filters vanished and I had to rebuild them by hand.","expected_sentiment":"negative","expected_topic":"bug"}
+{"id":52,"text":"Billing is now so clear. I can see exactly what each seat costs.","expected_sentiment":"positive","expected_topic":"billing"}
+{"id":53,"text":"Can I transfer ownership of the workspace to a colleague?","expected_sentiment":"neutral","expected_topic":"account"}
+{"id":54,"text":"The lack of a trash folder cost me an afternoon of work. Please add one.","expected_sentiment":"negative","expected_topic":"feature_request"}
+{"id":55,"text":"The date picker starts the week on Sunday even though I set Monday.","expected_sentiment":"neutral","expected_topic":"bug"}
+{"id":56,"text":"Thanks for restoring my access so fast after the lockout.","expected_sentiment":"positive","expected_topic":"account"}
+{"id":57,"text":"I was told the price was locked for a year. Now it went up. Explain?","expected_sentiment":"negative","expected_topic":"billing"}
+{"id":58,"text":"Are you planning a Spanish translation of the interface?","expected_sentiment":"neutral","expected_topic":"other"}
+{"id":59,"text":"Reported a typo yesterday and it was fixed today. Impressive.","expected_sentiment":"positive","expected_topic":"bug"}
+{"id":60,"text":"Is it possible to attach files from cloud drives directly?","expected_sentiment":"neutral","expected_topic":"feature_request"}

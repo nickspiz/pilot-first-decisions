@@ -1,0 +1,4 @@
+node_modules/
+bench-out/
+.env
+.DS_Store
