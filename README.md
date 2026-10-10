@@ -152,6 +152,10 @@ npm test
 
 Covers answer parsing, request shape, CSV and JSONL loading, agreement, confusion matrix, hybrid routing, and the report. Fetch is mocked, so tests never touch the network.
 
+## Questions and ideas
+
+Have a question or an idea? Start a [discussion](https://github.com/nickspiz/pilot-first-decisions/discussions). For bugs, open an [issue](https://github.com/nickspiz/pilot-first-decisions/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) before sending a pull request.
+
 ## License
 
 MIT
