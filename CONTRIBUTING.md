@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for looking at pilot-first-decisions. It is a client and benchmark harness for decision models. Small, focused fixes are the most useful.
+This repo is a client and benchmark harness for decision models. Small, focused fixes are welcome.
 
 ## Before you start
 
