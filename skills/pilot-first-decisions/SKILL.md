@@ -19,7 +19,7 @@ node "${CLAUDE_PLUGIN_ROOT}/bench.mjs" --data rows.jsonl --questions questions.j
 4. If the decision model holds up, route by confidence: low-confidence answers go back to the chat model.
 5. Report the before and after in cost and quality. Do not switch on a price claim alone.
 
-To see what a report looks like without a key or any cost, add `--fixture "${CLAUDE_PLUGIN_ROOT}/examples/fixture.json"` and point `--data` and `--questions` at the files in `examples/`. Those answers are invented.
+To see a report without an API key, add `--fixture "${CLAUDE_PLUGIN_ROOT}/examples/fixture.json"` and point `--data` and `--questions` at the files in `examples/`. Those answers are invented.
 
 Rules:
 

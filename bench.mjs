@@ -111,7 +111,7 @@ export function renderReport(s, meta) {
   const L = [];
   L.push('# Decision model vs chat model', '');
   L.push(`Rows: ${s.rows} (failed: ${s.errors}). Decision model: ${meta.decisionModel}. Chat model: ${meta.chatModel}.`, '');
-  if (meta.fixture) L.push('> Fixture replay. These answers are invented, so the numbers show the shape of a report and measure nothing.', '');
+  if (meta.fixture) L.push('> Fixture replay. These answers are invented. The numbers show what a report looks like, not how any model performs.', '');
   L.push('## Cost and latency', '', '| | Total cost | Per 100 rows | Median latency |', '|---|---|---|---|');
   const per100 = (c) => (s.rows ? usd((c / s.rows) * 100) : 'n/a');
   L.push(`| Decision | ${usd(s.decisionCost)} | ${per100(s.decisionCost)} | ${s.decisionMedianMs ?? 'n/a'} ms |`);
@@ -166,8 +166,8 @@ const USAGE = `Usage: node bench.mjs --data rows.jsonl|rows.csv --questions ques
   [--limit 20|all] [--confidence-threshold 0.8] [--text-field text] [--concurrency 4] [--out bench-out]
 Needs OPENROUTER_API_KEY in the environment. Default limit is 20 rows: pilot first.
 
-Offline demo, no key and no cost: node bench.mjs --fixture examples/fixture.json --data examples/support-messages.jsonl --questions examples/questions.json
-It replays invented answers (see scripts/make-fixture.mjs). The numbers show the shape of a report, not a model.`;
+Offline demo, no API key needed: node bench.mjs --fixture examples/fixture.json --data examples/support-messages.jsonl --questions examples/questions.json
+It replays invented answers (see scripts/make-fixture.mjs). The numbers are not a measurement.`;
 
 async function main() {
   const o = parseArgs(process.argv.slice(2));
@@ -181,7 +181,7 @@ async function main() {
   if (!rows.every((r) => r[o.textField])) throw new Error(`Every row needs a "${o.textField}" field (use --text-field)`);
   const fixture = o.fixture ? JSON.parse(readFileSync(o.fixture, 'utf8')) : null;
   console.error(fixture
-    ? `Fixture replay: ${rows.length} rows, canned answers, no API calls, no cost.`
+    ? `Fixture replay: ${rows.length} rows of canned answers. No API calls are made.`
     : `Running ${rows.length} rows against ${o.decisionModel} and ${o.chatModel}...`);
   const results = await pool(rows, o.concurrency, async (row, i) => {
     const text = String(row[o.textField]);

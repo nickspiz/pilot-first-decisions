@@ -2,7 +2,7 @@
 
 **Stop paying a chat model to answer yes/no. A recipe and a benchmark harness for decision models.**
 
-![bench.mjs replaying a fixture: cost and latency, agreement and accuracy tables](docs/demo.gif)
+![bench.mjs replaying a fixture and printing a report](docs/demo.gif)
 
 Many LLM calls in production are not "write something". They are "decide something": is this message angry, which topic is it, is the brand mentioned, how urgent is it. A chat model does these fine, but you pay for a full generation and wait for it. A decision model returns the answer as probabilities with a confidence, and it is built for exactly this job.
 
@@ -40,7 +40,7 @@ cd pilot-first-decisions
 npm test                        # no network needed
 ```
 
-See what a report looks like first. This replays invented answers, so it needs no key, no network and costs nothing:
+See what a report looks like first. This replays invented answers, so it needs no API key and costs nothing:
 
 ```bash
 node bench.mjs --fixture examples/fixture.json \
@@ -49,9 +49,9 @@ node bench.mjs --fixture examples/fixture.json \
   --confidence-threshold 0.8 --limit 60
 ```
 
-The numbers in that run measure nothing. `scripts/make-fixture.mjs` shows how they are made.
+Those numbers are made up and say nothing about any model. `scripts/make-fixture.mjs` shows how they are made.
 
-As a Claude Code plugin (a skill plus the bundled script):
+You can also install it as a Claude Code plugin, which adds a skill and the script:
 
 ```text
 /plugin install pilot-first-decisions --marketplace nickspiz/pilot-first-decisions
