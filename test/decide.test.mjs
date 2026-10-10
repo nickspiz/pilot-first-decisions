@@ -58,7 +58,10 @@ test('decide surfaces API errors and missing key', async () => {
   const fetchImpl = async () => ({ ok: false, status: 401, json: async () => ({ error: { message: 'bad key' } }) });
   await assert.rejects(decide({ state: 's', questions: q, apiKey: 'k', fetchImpl }), /bad key/);
   const saved = process.env.OPENROUTER_API_KEY;
+  const savedOpt = process.env.CLAUDE_PLUGIN_OPTION_OPENROUTER_API_KEY;
   delete process.env.OPENROUTER_API_KEY;
+  delete process.env.CLAUDE_PLUGIN_OPTION_OPENROUTER_API_KEY;
   await assert.rejects(decide({ state: 's', questions: q, fetchImpl }), /OPENROUTER_API_KEY/);
   if (saved) process.env.OPENROUTER_API_KEY = saved;
+  if (savedOpt) process.env.CLAUDE_PLUGIN_OPTION_OPENROUTER_API_KEY = savedOpt;
 });

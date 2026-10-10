@@ -58,7 +58,7 @@ export function normalizeResponse(data) {
  * Ask many questions about one piece of text in a single request.
  * Returns { answers, cost, latencyMs, model }.
  */
-export async function decide({ state, questions, apiKey = process.env.OPENROUTER_API_KEY, model = DEFAULT_MODEL, url = DECISIONS_URL, fetchImpl = globalThis.fetch, timeoutMs = 30000 }) {
+export async function decide({ state, questions, apiKey = process.env.OPENROUTER_API_KEY || process.env.CLAUDE_PLUGIN_OPTION_OPENROUTER_API_KEY, model = DEFAULT_MODEL, url = DECISIONS_URL, fetchImpl = globalThis.fetch, timeoutMs = 30000 }) {
   if (!apiKey) throw new Error('OPENROUTER_API_KEY is not set');
   validateQuestions(questions);
   const started = performance.now();

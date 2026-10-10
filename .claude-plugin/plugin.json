@@ -2,9 +2,29 @@
   "name": "pilot-first-decisions",
   "version": "0.1.0",
   "description": "A recipe and benchmark harness for swapping chat-model yes/no and classification calls for a cheaper decision model, pilot first.",
-  "author": { "name": "Nikita Spitsyn", "url": "https://github.com/nickspiz" },
+  "author": {
+    "name": "Nikita Spitsyn",
+    "email": "hello@nickspiz.com",
+    "url": "https://github.com/nickspiz"
+  },
   "homepage": "https://github.com/nickspiz/pilot-first-decisions",
   "repository": "https://github.com/nickspiz/pilot-first-decisions",
   "license": "MIT",
-  "keywords": ["llm", "classification", "benchmark", "openrouter"]
+  "keywords": [
+    "llm",
+    "classification",
+    "benchmark",
+    "openrouter"
+  ],
+  "supportUrl": "https://github.com/nickspiz/pilot-first-decisions/issues",
+  "userConfig": {
+    "openrouter_api_key": {
+      "type": "string",
+      "title": "OpenRouter API key",
+      "description": "Your own OpenRouter key. Sent only to openrouter.ai when decide.mjs or bench.mjs run without --fixture.",
+      "sensitive": true,
+      "required": false
+    }
+  },
+  "privacyPolicyUrl": "https://github.com/nickspiz/pilot-first-decisions#privacy"
 }

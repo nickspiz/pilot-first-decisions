@@ -24,5 +24,6 @@ To see a report without an API key, add `--fixture "${CLAUDE_PLUGIN_ROOT}/exampl
 Rules:
 
 - The API key comes from the `OPENROUTER_API_KEY` environment variable. Never write it into a file.
+- Without `--fixture`, the script sends each row's text to openrouter.ai. Tell the user that before the first real run and use only rows they are allowed to share.
 - A decision model does not write text, do arithmetic, or read media. Keep those on the chat model.
-- The decisions endpoint is in beta. Pin the model id and keep the chat model as a fallback.
+- The decisions endpoint is alpha and the model is in beta. Pin the model id and keep the chat model as a fallback.

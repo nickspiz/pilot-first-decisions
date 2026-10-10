@@ -44,7 +44,7 @@ export function parseChatAnswers(content, questions) {
   return out;
 }
 
-export async function chatDecide({ text, questions, model, apiKey = process.env.OPENROUTER_API_KEY, fetchImpl = globalThis.fetch, url = CHAT_URL }) {
+export async function chatDecide({ text, questions, model, apiKey = process.env.OPENROUTER_API_KEY || process.env.CLAUDE_PLUGIN_OPTION_OPENROUTER_API_KEY, fetchImpl = globalThis.fetch, url = CHAT_URL }) {
   if (!apiKey) throw new Error('OPENROUTER_API_KEY is not set');
   const started = performance.now();
   const res = await fetchImpl(url, {

@@ -13,6 +13,12 @@ This repo has two small scripts, no dependencies, Node 18 or newer:
 
 The recipe is the order of work: **pilot first, compare by eye, then route by confidence.** Don't switch a production call because a vendor page says it is cheaper. Run 20 rows, read the disagreements, then decide.
 
+## Example prompts
+
+- "Check whether a decision model can replace my chat model for tagging support messages as angry or not."
+- "Run the pilot on examples/support-messages.jsonl in fixture mode." Makes no network calls and needs no key.
+- "Compare costs on 20 of my rows and show the disagreements." Sends those 20 rows to OpenRouter. See [Data sent](#data-sent).
+
 ## When to use it
 
 Good fit:
@@ -54,7 +60,8 @@ Those numbers are made up and say nothing about any model. `scripts/make-fixture
 You can also install it as a Claude Code plugin, which adds a skill and the script:
 
 ```text
-/plugin install pilot-first-decisions --marketplace nickspiz/pilot-first-decisions
+/plugin marketplace add nickspiz/pilot-first-decisions
+/plugin install pilot-first-decisions@pilot-first-decisions
 ```
 
 Ask a few questions about one text:
@@ -137,6 +144,28 @@ The layout below is illustrative. The numbers are invented to show the shape, th
 
 In one pilot of 100 rows (tone of brand mentions in real answers, three classes), the decision model agreed with a chat model on about 70% of rows. It cost about $0.003 per 100 calls, with a median latency of about 0.35 s. It rarely mixed up positive and negative, but it leans toward "neutral": most of the rows the chat model called negative came back neutral. That is why the confidence threshold exists. Treat these as one data point on one task, not a benchmark. Disagreement is not the same as error, since the chat model is not ground truth either. Run your own rows.
 
+## Data sent
+
+When you run `decide.mjs` or `bench.mjs` without `--fixture`, the scripts send data to openrouter.ai. That is a third-party service, not run by the author. Your row text leaves your machine.
+
+- **To `https://openrouter.ai/api/alpha/decisions`** (decision model): the text of each row, your question spec, and the model id.
+- **To `https://openrouter.ai/api/v1/chat/completions`** (the chat model you name with `--chat-model`, benchmark only): the text of each row, the questions, and the model id. OpenRouter passes the request on to the model provider.
+- **In the `Authorization` header of both:** your OpenRouter API key.
+- **Nothing goes to the author.** There is no telemetry and no other server.
+- Use rows you are allowed to share with OpenRouter and the model providers. OpenRouter's privacy policy: https://openrouter.ai/privacy
+
+Fixture mode (`--fixture`) and `npm test` make no network calls.
+
+**Where results go.** `bench.mjs` writes `report.md` and `results.json` to the folder you pass with `--out` (default `bench-out/`, relative to where you run it). `results.json` keeps every raw answer, so treat it as data from your input rows. `decide.mjs` prints to the terminal and writes no files.
+
+**The API key.** The plugin declares the key as a sensitive plugin option (`openrouter_api_key`), so Claude Code can ask for it and store it in the system credential store instead of a settings file. The scripts read `OPENROUTER_API_KEY` first and `CLAUDE_PLUGIN_OPTION_OPENROUTER_API_KEY` second. Claude Code does not pass plugin options to commands that Claude runs through the Bash tool, so for runs started by Claude, export `OPENROUTER_API_KEY` in the shell you start Claude Code from. The key is only ever sent to openrouter.ai, and the scripts never write it to a file.
+
+**Alpha endpoint.** The decision endpoint is `/api/alpha/decisions`. It is an alpha API and the model `typesafe/jev-1.13` is in beta and not in the public OpenRouter model list. Its response shape, price or availability can change without notice. Pin the model id and keep the chat model as a fallback.
+
+## Privacy
+
+What the plugin runs: one skill that tells Claude to run `bench.mjs` (Node 18+, no dependencies) on files you point it at. What it reads: your input file (CSV or JSONL), your question file, and the API key. What it writes: `report.md` and `results.json` in the `--out` folder. What it sends: see [Data sent](#data-sent).
+
 ## Honest notes
 
 - The decision model is in beta. The endpoint is `alpha`, the model is not in the public OpenRouter model list, and the response shape or pricing can change. Pin the model id and keep the chat model as a fallback.
@@ -156,8 +185,10 @@ Covers answer parsing, request shape, CSV and JSONL loading, agreement, confusio
 
 Have a question or an idea? Start a [discussion](https://github.com/nickspiz/pilot-first-decisions/discussions). For bugs, open an [issue](https://github.com/nickspiz/pilot-first-decisions/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) before sending a pull request.
 
+## Support
+
+Questions or bugs: [GitHub Issues](https://github.com/nickspiz/pilot-first-decisions/issues) or hello@nickspiz.com.
+
 ## License
 
 MIT
-
-If this helped, a star helps others find it.
